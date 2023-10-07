@@ -1,0 +1,17 @@
+<div *ngIf="getProdArr.length > 0; else noProd">
+    <div class="card mb-2 " [ngClass]="{
+        'bg-light' : prod.prodCat === 'product', 
+    'bg-warning' : prod.prodCat === 'catalogue'
+}" *ngFor="let prod of getProdArr">
+        <div class="card-header">{{prod.prodName}}</div>
+        <div class="card-body">{{prod.prodDescr}}</div>
+        <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-success">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #noProd>
+    <p class="alert alert-info">No product added yet</p>
+</ng-template>

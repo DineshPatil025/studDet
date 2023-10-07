@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Iemp, Istud } from './shared/models/std';
+import { Iemp, Iprod, Istud } from './shared/models/std';
 
 @Component({
   selector: 'app-root',
@@ -43,4 +43,8 @@ export class AppComponent implements OnInit {
     this.empArr.push(emp)
   }
 
+  prodArr: Array<Iprod> = []
+  recvprodDetails(prod : Iprod){
+    this.prodArr.push(prod)
+  }
 }

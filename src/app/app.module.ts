@@ -7,6 +7,8 @@ import { StudFormComponent } from './shared/component/stud-form/stud-form.compon
 import { StdTableComponent } from './shared/component/std-table/std-table.component';
 import { EmpFormComponent } from './shared/component/emp-form/emp-form.component';
 import { EmpTableComponent } from './shared/component/emp-table/emp-table.component';
+import { ProdFromComponent } from './shared/component/prod-from/prod-from.component';
+import { ProdCardComponent } from './shared/component/prod-card/prod-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { EmpTableComponent } from './shared/component/emp-table/emp-table.compon
     StudFormComponent,
     StdTableComponent,
     EmpFormComponent,
-    EmpTableComponent
+    EmpTableComponent,
+    ProdFromComponent,
+    ProdCardComponent
   ],
   imports: [
     BrowserModule,

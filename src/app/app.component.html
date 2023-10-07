@@ -1,3 +1,22 @@
+<!-- PRODUCT DETAILS -->
+
+<div class="container my-3 py-4">
+  <h3 class="bg-warning text-white text-capitalize text-center py-2">Card background color depending upon category</h3>
+
+  <div class="row">
+    <div class="col-md-6">
+      <app-prod-from
+      (sendProdDet)="recvprodDetails($event)"
+      ></app-prod-from>
+    </div>
+    <div class="col-md-6">
+      <app-prod-card
+      [getProdArr] ="prodArr"
+      ></app-prod-card>
+    </div>
+  </div>
+</div>
+<!-- STUDENT DETAILS -->
 <div class="container my-3 py-4">
 
   <h3 class="bg-warning text-white text-capitalize text-center py-2">student details</h3>
@@ -11,7 +30,9 @@
   </div>
 </div>
 
-<div class="container">
+<!-- EMPLOYEE DETAILS -->
+
+<div class="container my-3 py-4">
   <h3 class="bg-warning text-white text-capitalize text-center mt-2 py-2">Employe details</h3>
 
   <div class="row">
@@ -27,3 +48,5 @@
     </div>
   </div>
 </div>
+
+

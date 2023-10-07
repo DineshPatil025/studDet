@@ -11,3 +11,10 @@ export interface Iemp {
     email: string;
     contact: number;
 }
+
+export interface Iprod {
+    prodName: string;
+    prodDescr: string;
+    // prodCat: "Product" | "Catalogue"
+    prodCat: string
+}

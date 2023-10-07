@@ -1,0 +1,16 @@
+<div class="form-group">
+    <label for="prodName">Product Name</label>
+    <input type="text" class="form-control" #prodName>
+</div>
+<div class="form-group">
+    <label for="prodDescr">Product Description</label>
+    <textarea name="prodDescr" id="prodDescr" class="form-control" cols="10" rows="5" #prodDescr></textarea>
+</div>
+<div class="text-right">
+    <button class="btn btn-primary mr-2"
+    (click)="addProduct('product')"
+    >Add As Product</button>
+    <button class="btn btn-success"
+    (click)="addProduct('catalogue')"
+    >Add As catalogue</button>
+</div>
