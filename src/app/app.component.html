@@ -1,14 +1,29 @@
-<div class="container py-4">
+<div class="container my-3 py-4">
+
+  <h3 class="bg-warning text-white text-capitalize text-center py-2">student details</h3>
   <div class="row">
     <div class="col-md-6">
-     <app-stud-form
-     (onStudsubmit) = "getStudDet($event)"
-     ></app-stud-form>
+      <app-stud-form (onStudsubmit)="getStudDet($event)"></app-stud-form>
     </div>
     <div class="col-md-6 ">
-     <app-std-table
-     [getstudArr]="studArr"
-     ></app-std-table>
+      <app-std-table [getstudArr]="studArr"></app-std-table>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="bg-warning text-white text-capitalize text-center mt-2 py-2">Employe details</h3>
+
+  <div class="row">
+    <div class="col-md-6">
+      <app-emp-form
+      (sendEmpData)="recvEmpDta($event)"
+      ></app-emp-form>
+    </div>
+    <div class="col-md-6">
+      <app-emp-table
+      [getEmpArr] = "empArr"
+      ></app-emp-table>
     </div>
   </div>
 </div>

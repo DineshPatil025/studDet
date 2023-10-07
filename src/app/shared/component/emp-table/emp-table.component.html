@@ -1,0 +1,27 @@
+<div class="table-responsive" >
+  <p class="alert alert-info text-success" *ngIf="getEmpArr.length > 0">Number of students : <strong>{{getEmpArr.length}}</strong> </p>
+
+    <table class="table table-bordered" *ngIf="getEmpArr.length > 0; else noEmp">
+        <thead>
+            <tr>
+                <th>Sl No</th>
+                <th>Emp F Name</th>
+                <th>Emp L Name</th>
+                <th>Emp E-Mail</th>
+                <th>Emp Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of getEmpArr; index as i">
+                <td>{{i +1}}</td>
+                <td>{{emp.fname}}</td>
+                <td>{{emp.lname}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #noEmp>
+    <p class="alert alert-info">No Employee Added Yet !!!!!</p>
+</ng-template>

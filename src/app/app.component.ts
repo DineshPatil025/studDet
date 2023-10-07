@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Istud } from './shared/models/std';
+import { Iemp, Istud } from './shared/models/std';
 
 @Component({
   selector: 'app-root',
@@ -24,9 +24,23 @@ export class AppComponent implements OnInit {
     //   contact : 2222
     // }
   ]
-  
-  getStudDet(stud : Istud){
+
+  getStudDet(stud: Istud) {
     this.studArr.push(stud);
+  }
+
+  empArr: Array<Iemp> = [
+    // {
+    //   fname: "fname1",
+    //   lname: "lname1",
+    //   email: "email1",
+    //   contact: 12345
+    // }
+
+
+  ]
+  recvEmpDta(emp: Iemp) {
+    this.empArr.push(emp)
   }
 
 }
