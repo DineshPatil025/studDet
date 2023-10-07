@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <p class="alert alert-info text-success" *ngIf="getstudArr.length > 0">Number of students : <strong>{{getstudArr.length}}</strong> </p>
+  <table class="table table-bordered" *ngIf="getstudArr.length > 0; else nostud">
+      <thead>
+
+        <tr>
+          <th>Sl No</th>
+          <th>First Name </th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stud of getstudArr; index as i">
+          <td>{{ i + 1}}</td>
+          <td>{{stud.fname}}</td>
+          <td>{{stud.lname}}</td>
+          <td>{{stud.email}}</td>
+          <td>{{stud.contact}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #nostud>
+    <p class="alert alert-info text-danger">No Student Added Yet !!!!</p>
+  </ng-template>
+  <ng-template #numOfstud>
+    <p class="alert alert-info text-danger">Number of students : {{getstudArr.length + 1}}</p>
+  </ng-template>

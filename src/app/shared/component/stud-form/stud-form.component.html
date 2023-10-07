@@ -1,0 +1,19 @@
+<div class="form-group">
+    <label for="fname">F Name<strong class="text-danger ">*</strong></label>
+    <input type="text" class="form-control" #fname>
+  </div>
+  <div class="form-group">
+    <label for="lname">L Name<strong class="text-danger ">*</strong></label>
+    <input type="text" class="form-control" #lname>
+  </div>
+  <div class="form-group">
+    <label for="email">E-Mail<strong class="text-danger ">*</strong></label>
+    <input type="email" class="form-control" #email>
+  </div>
+  <div class="form-group">
+    <label for="contact">Contact<strong class="text-danger ">*</strong></label>
+    <input type="number" min="0" class="form-control" #contact>
+  </div>
+  <div class="text-right">
+    <button class="btn btn-success" (click)="addStud()">Add Student</button>
+  </div>
